@@ -14,8 +14,8 @@ spec:
   replicas: <NUMBER_OF_REPLCIAS>
   strategy:
     rollingUpdate:
-	  maxSurge: <PODS_NUMBER> # Cuantos pods levanta inmediatamente
-	  maxUnavailable: <PODS_NUMBER> # Cuantas replicas pueden estar muertas
+      maxSurge: <PODS_NUMBER> # Cuantos pods levanta inmediatamente
+      maxUnavailable: <PODS_NUMBER> # Cuantas replicas pueden estar muertas
   selector:
     matchLabels:
       app: example-app
