@@ -1,6 +1,6 @@
 > Entiendase como workload las cargas u objetos de kubernetes como pods, deployments, etcetera.
 
-- Ingresar a un contenedor especifico de un pod
+- ✨ Ingresar a un contenedor especifico de un pod ✨
 ```shell
   kubectl exec -it <POD_NAME> -c <CONTAINER_NAME> -- /bin/sh
   # Si no se especifica el contenedor kubectl ingresara al primer contenedor definido en el manifiesto del pod
@@ -32,12 +32,12 @@ kubectl delete <WORKLOAD>/<WORKLOAD_NAME>
 kubectl edit <WORKLOAD>/<WORKLOAD_NAME>
 ```
 
-- Ver las versiones/Revisiones (historial) de los deployments con su numero de version
+- ✨ Ver las versiones/Revisiones (historial) de los deployments con su numero de version ✨
 ```shell
 kubectl rollout history deployment/<DEPLOYMENT_NAME>
 ```
 
-- Hacer Rollback de los deployments
+- ✨ Hacer Rollback de los deployments ✨
 ```shell
 kubectl rollout unde deployment/<DEPLOYMENT_NAME> --to-revision=<VERSION_NUMBER>
 # la version se obtiene del comando anterior
@@ -53,12 +53,12 @@ kubectl logs <WORKLOAD>/<WORKLOAD_NAME>
 kubectl get <WORKLOAD> -o wide
 ```
 
-- Setear un tiempo de gracia antes de eliminar un pod del cluster
+- ✨ Setear un tiempo de gracia antes de eliminar un pod del cluster ✨
 ```shell
 kubectl delete pod <POD_NAME> --grace-period=<SECONDS>
 ```
 
-- Muestra el manifiesto (YAML) de un workload
+- ✨Muestra el manifiesto (YAML) de un workload ✨
 ```shell
 kubectl get <WORKLOAD>/<WORKLOAD_NAME> -o yaml
 ```
