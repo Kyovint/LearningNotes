@@ -3,6 +3,7 @@
 - Ingresar a un contenedor especifico de un pod
 ```shell
   kubectl exec -it <POD_NAME> -c <CONTAINER_NAME> -- /bin/sh
+  # Si no se especifica el contenedor kubectl ingresara al primer contenedor definido en el manifiesto del pod
 ```
 
 - Aplicar las configuraciones de un manifiesto
