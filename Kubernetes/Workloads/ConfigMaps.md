@@ -50,9 +50,12 @@ spec:
   volumes:
   - name: <VOLUME_NAME>
     configMap:
-	  name: app-config
+	  name: <CONFIGMAP_NAME>
 ```
 
-El archivo se creara en la ruta especificada con todo el contenido de llave valor del configmap
+Kubernetes crea un archivo por cada llave del configmap en la ruta donde se hace el montaje en el contenedor y el contenido de cada uno es el valor de la llave dentro del confimap.
+
+Por ejemplo, si el configmap tiene las llaves A=1 y B=2 en la ruta de montaje habran dos archivos A y B y sus contenidos seran 1 y 2 respectivamente.
+
 
 > La actualizacion de un configmap no actualiza, reinicia o mata ningun workload que lo este usando, lo que hace dinamico el uso de los valores de los configmap
