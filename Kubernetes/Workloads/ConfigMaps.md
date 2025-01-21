@@ -27,10 +27,10 @@ spec:
     image: <IMAGE_NAME>
     env:
       - name: <VALUE_NAME
-	    valueFrom:
-	      configMapKeyRef:
-	        name: <CONFIGMAP_NAME>
-	        key: <KEY_NAME>
+        valueFrom:
+          configMapKeyRef:
+            name: <CONFIGMAP_NAME>
+            key: <KEY_NAME>
 ```
 
 Con los configamps tambien es posible generar un archivo de valores dentro del pod mediante el uso de volumenes de la siguiente manera
