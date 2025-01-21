@@ -50,7 +50,7 @@ spec:
   volumes:
   - name: <VOLUME_NAME>
     configMap:
-	  name: <CONFIGMAP_NAME>
+      name: <CONFIGMAP_NAME>
 ```
 
 Kubernetes crea un archivo por cada llave del configmap en la ruta donde se hace el montaje en el contenedor y el contenido de cada uno es el valor de la llave dentro del confimap.
