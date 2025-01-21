@@ -62,3 +62,8 @@ kubectl delete pod <POD_NAME> --grace-period=<SECONDS>
 ```shell
 kubectl get <WORKLOAD>/<WORKLOAD_NAME> -o yaml
 ```
+
+- Hacer el port forward de un pod a la maquina local
+```shell
+kubectl port-forward pod/<POD_NAME> <LOCAL_PORT>:<CONTAINER_PORT>
+```
