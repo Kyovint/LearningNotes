@@ -14,6 +14,20 @@ data:
   <KEY>: "VALUE"
 ```
 
+>Los configmaps pueden contener la escritura de un archivo con el fin de luego ser cargado en un volumen y generar la inyeccion de un archivo dentro de un pod, asi:
+```yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: html-configmap
+  namespace: default
+data:
+  index.html: |
+    <!DOCTYPE html>
+    ...
+    </html>
+```
+
 Los configmaps se crean en el cluster pero deben ser usados por los pods de la siguiente manera agregando `spec.containers.<container>.env.<value>.valueFrom.configMapRef`
 
 ```yml

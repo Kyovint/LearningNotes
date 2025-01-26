@@ -67,3 +67,8 @@ kubectl get <WORKLOAD>/<WORKLOAD_NAME> -o yaml
 ```shell
 kubectl port-forward pod/<POD_NAME> <LOCAL_PORT>:<CONTAINER_PORT>
 ```
+
+- Obtener todos los workloads configuradores dentro del cluster
+```shell
+kubectl get all
+```
